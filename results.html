@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Daalkash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #000; color: #fff; font-family: Arial, sans-serif; }
+        .results-page { max-width: 800px; margin: auto; padding: 20px; }
+        input { width: 100%; padding: 10px; margin-bottom: 20px; border: none; border-radius: 5px; }
+        ul { list-style: none; padding: 0; }
+        li { background: #111; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        li:hover { background: #222; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="results.html" class="active">Results</a>
+        </nav>
+    </header>
+
+    <main class="results-page">
+        <h1>Program Results</h1>
+        <input type="text" id="search" placeholder="Search results..." onkeyup="searchResults()">
+        <ul id="results-list">
+            <li>Music Competition - Team A - 1st Place</li>
+            <li>Drama - Team B - 2nd Place</li>
+            <li>Poetry - Team C - 3rd Place</li>
+            <li>Painting - Team A - 1st Place</li>
+        </ul>
+    </main>
+
+    <script>
+        function searchResults() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const items = document.querySelectorAll('#results-list li');
+            items.forEach(item => {
+                item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

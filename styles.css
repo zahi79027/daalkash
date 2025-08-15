@@ -179,3 +179,26 @@ a:hover{ color: var(--brand-strong); }
 @media (max-width: 720px){
   .footer-inner{ flex-direction:column; }
 }
+
+.hero {
+    background-image: url("https://i.postimg.cc/s2tPGpjx/Color-pencils-isolated-on-white-back-featuring-arrangement-art-and-artist.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.btn-results {
+    background-color: #00bfff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
