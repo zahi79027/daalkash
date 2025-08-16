@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results - Daalkash</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body { background-color: #000; color: #fff; font-family: Arial, sans-serif; }
-        .results-page { max-width: 800px; margin: auto; padding: 20px; }
-        input { width: 100%; padding: 10px; margin-bottom: 20px; border: none; border-radius: 5px; }
-        ul { list-style: none; padding: 0; }
-        li { background: #111; margin: 5px 0; padding: 10px; border-radius: 5px; }
-        li:hover { background: #222; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ദാൽക്കഷ് - Results</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="results.html" class="active">Results</a>
-        </nav>
-    </header>
+  <header>
+    <nav class="subnav">
+      <ul>
+        <li><a href="results.html">Programs</a></li>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="results-page">
-        <h1>Program Results</h1>
-        <input type="text" id="search" placeholder="Search results..." onkeyup="searchResults()">
-        <ul id="results-list">
-            <li>Music Competition - Team A - 1st Place</li>
-            <li>Drama - Team B - 2nd Place</li>
-            <li>Poetry - Team C - 3rd Place</li>
-            <li>Painting - Team A - 1st Place</li>
-        </ul>
-    </main>
+  <main class="results-list">
+    <h2>Programs</h2>
+    <ul>
+      <li><a href="#" onclick="showPoster('https://i.postimg.cc/053HT4DL/Gemini-Generated-Image-3extyu3extyu3ext.png')">High School Madhu Hanam</a></li>
+      <li><a href="#" onclick="showPoster('https://i.postimg.cc/Pq7T044K/Gemini-Generated-Image-lmbyfjlmbyfjlmby.png')">Junior Poem Making</a></li>
+      <li><a href="#" onclick="showPoster('https://i.postimg.cc/RhR8xCm9/Gemini-Generated-Image-89z1gm89z1gm89z1.png')">Junior Story Writing</a></li>
+    </ul>
+  </main>
 
-    <script>
-        function searchResults() {
-            const input = document.getElementById('search').value.toLowerCase();
-            const items = document.querySelectorAll('#results-list li');
-            items.forEach(item => {
-                item.style.display = item.textContent.toLowerCase().includes(input) ? '' : 'none';
-            });
-        }
-    </script>
+  <div id="posterModal" class="modal">
+    <span class="close" onclick="closePoster()">&times;</span>
+    <img class="modal-content" id="posterImg">
+  </div>
 </body>
 </html>
