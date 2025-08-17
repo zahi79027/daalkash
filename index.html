@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="ml">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ദാൽക്കഷ് - Home</title>
+  <title>DAALKASH - Home</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">ദാൽക്കഷ്</div>
+      <div class="logo">DAALKASH</div>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#">News</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Videos</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#videos">Videos</a></li>
         <li><a href="#">Sessions</a></li>
         <li><a href="#">Archive</a></li>
         <li><a href="#">Live</a></li>
@@ -26,8 +26,31 @@
   </header>
 
   <section class="hero">
-    <h1 class="main-title">ദാൽക്കഷ്</h1>
+    <h1 class="main-title">DAALKASH</h1>
+    <p style="color: #ccc; font-size: 1.2rem; margin-top: -20px; margin-bottom: 30px;">Kerala Art Fest</p>
     <a href="results.html" class="btn-primary">Get Results</a>
+  </section>
+
+  <section id="about" class="content-section">
+    <h2>About Daalkash</h2>
+    <p>Welcome to Daalkash, the annual celebration of art, culture, and talent. This festival brings together artists, performers, and enthusiasts from all over Kerala to showcase their skills and compete in a spirit of creativity and camaraderie. Join us for a vibrant experience of tradition and innovation.</p>
+  </section>
+
+  <section id="gallery" class="content-section" style="background: #222;">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://i.postimg.cc/053HT4DL/Gemini-Generated-Image-3extyu3extyu3ext.png" alt="Gallery Image 1">
+      <img src="https://i.postimg.cc/Pq7T044K/Gemini-Generated-Image-lmbyfjlmbyfjlmby.png" alt="Gallery Image 2">
+      <img src="https://i.postimg.cc/RhR8xCm9/Gemini-Generated-Image-89z1gm89z1gm89z1.png" alt="Gallery Image 3">
+      <img src="https://via.placeholder.com/300x200/ff0000/ffffff?text=Art+4" alt="Gallery Image 4">
+    </div>
+  </section>
+
+  <section id="videos" class="content-section">
+    <h2>Videos</h2>
+    <div class="video-container">
+      <p>Video content will be updated soon. Check out our YouTube channel for highlights from previous years!</p>
+    </div>
   </section>
 </body>
 </html>

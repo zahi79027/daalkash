@@ -1,9 +1,9 @@
-function showPoster(src) {
-  var modal = document.getElementById("posterModal");
-  var img = document.getElementById("posterImg");
-  img.src = src;
-  modal.style.display = "block";
+function showPoster(url) {
+  const modal = document.getElementById('posterModal');
+  const posterImg = document.getElementById('posterImg');
+  posterImg.src = url;
+  modal.style.display = 'flex';
 }
 function closePoster() {
-  document.getElementById("posterModal").style.display = "none";
+  document.getElementById('posterModal').style.display = 'none';
 }
