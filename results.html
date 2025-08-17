@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAALKASH - Results</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daalkash — Results</title>
+  <link rel="stylesheet" href="styles.css"/>
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="subnav">
-      <ul>
-        <li><a href="results.html">Programs</a></li>
-        <li><a href="teams.html">Teams</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="subnav">
+    <ul>
+      <li><a class="active" href="results.html">Programs</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+    </ul>
+  </nav>
 
   <main class="results-list">
-    <h2>Programs</h2>
+    <h2 style="text-align:center;">Programs</h2>
     <ul>
       <li><a href="#" onclick="showPoster('https://i.postimg.cc/053HT4DL/Gemini-Generated-Image-3extyu3extyu3ext.png')">High School Madhu Hanam</a></li>
       <li><a href="#" onclick="showPoster('https://i.postimg.cc/Pq7T044K/Gemini-Generated-Image-lmbyfjlmbyfjlmby.png')">Junior Poem Making</a></li>
@@ -29,7 +27,7 @@
 
   <div id="posterModal" class="modal" onclick="closePoster()">
     <span class="close" onclick="closePoster()">&times;</span>
-    <img class="modal-content" id="posterImg">
+    <img id="posterImg" class="modal-content" alt="Result Poster"/>
   </div>
 </body>
 </html>

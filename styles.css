@@ -1,7 +1,120 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #1a1a1a; /* Dark background */
-  color: #f0f0f0; /* Light text */
+:root{
+  --bg:#0d0f13;
+  --panel:#131722;
+  --text:#eaf6ff;
+  --muted:#9cc7ff;
+  --brand:#4db8ff;
+  --brand-strong:#2aa4ff;
+  --border:#202736;
+  --hover:#0f2233;
+  --shadow: 0 8px 24px rgba(0,0,0,0.35);
 }
-/* rest of your CSS from earlier */
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.container{ width:min(1100px,92%); margin:0 auto; }
+a{ color: var(--brand); text-decoration:none; }
+a:hover{ color: var(--brand-strong); }
+
+/* Header */
+.site-header{ position:sticky; top:0; z-index:1000; background:rgba(13,15,19,.9); backdrop-filter: blur(6px); border-bottom:1px solid var(--border); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+.brand{ display:flex; align-items:center; gap:10px; }
+.logo-dot{ width:14px; height:14px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--text)); box-shadow:0 0 18px rgba(77,184,255,.6); }
+.brand-name{ font-weight:800; letter-spacing:.5px; text-transform:uppercase; }
+
+.main-nav ul{ display:flex; gap:18px; list-style:none; margin:0; padding:0; }
+.main-nav a{ padding:8px 10px; border-radius:8px; color:var(--text); }
+.main-nav a.active, .main-nav a:hover{ background:var(--hover); }
+.nav-toggle{ display:none; background:none; border:1px solid var(--border); color:var(--text); padding:6px 10px; border-radius:8px; }
+
+@media (max-width:860px){
+  .nav-toggle{ display:block; }
+  .main-nav ul{ position:absolute; right:4%; top:60px; display:none; flex-direction:column; gap:0; background:var(--panel); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .main-nav ul.show{ display:flex; }
+  .main-nav a{ padding:12px 16px; border-bottom:1px solid var(--border); }
+  .main-nav li:last-child a{ border-bottom:none; }
+}
+
+/* Hero */
+.hero{
+  position:relative; min-height:58vh; display:grid; place-items:center;
+  background:
+    radial-gradient(900px 400px at 10% -20%, rgba(77,184,255,.18), transparent 60%),
+    radial-gradient(900px 400px at 90% -20%, rgba(77,184,255,.14), transparent 60%),
+    linear-gradient(180deg, #0c121a 0%, #0b0f16 100%);
+  border-bottom:1px solid var(--border);
+  text-align:center; padding:80px 0;
+}
+/* Optional image background - remove if not needed */
+.hero.with-image{
+  background-image:url("https://i.postimg.cc/s2tPGpjx/Color-pencils-isolated-on-white-back-featuring-arrangement-art-and-artist.jpg"),
+    radial-gradient(900px 400px at 10% -20%, rgba(77,184,255,.18), transparent 60%),
+    linear-gradient(180deg, #0c121a 0%, #0b0f16 100%);
+  background-size:cover; background-position:center;
+}
+.hero h1{ font-size:clamp(2rem,6vw,3.6rem); margin:0 0 8px; letter-spacing:1px; }
+.tagline{ color:var(--muted); margin-bottom:24px; }
+.hero-ctas{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.btn{ display:inline-block; padding:10px 16px; border-radius:10px; border:1px solid var(--border); transition:all .2s ease; }
+.btn-primary{ background:var(--brand); color:#041321; border-color:transparent; box-shadow:0 6px 18px rgba(42,164,255,.35); }
+.btn-primary:hover{ background:var(--brand-strong); }
+.btn-outline{ color:var(--text); background:transparent; }
+
+.section{ padding:64px 0; }
+.section-alt{ background:#0e131c; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.section-header{ text-align:center; }
+.section-header h2{ margin:0 0 18px; }
+
+.two-col{ display:grid; grid-template-columns:1.2fr .8fr; gap:24px; }
+@media (max-width:860px){ .two-col{ grid-template-columns:1fr; } }
+
+.card{ background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow); }
+.card.highlight{ border-color:rgba(77,184,255,.35); background:linear-gradient(180deg, rgba(77,184,255,.08), transparent 40%), var(--panel); }
+
+.cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+@media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
+
+.grid{ display:grid; gap:14px; }
+.gallery-grid{ grid-template-columns:repeat(3, 1fr); }
+@media (max-width:900px){ .gallery-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:600px){ .gallery-grid{ grid-template-columns:1fr; } }
+
+.gallery-item, .video-card, .placeholder{
+  display:grid; place-items:center; min-height:140px; background:#0a0f16; border:1px solid var(--border); border-radius:12px; color:var(--muted);
+}
+
+/* Footer */
+.site-footer{ border-top:1px solid var(--border); background:#0b0e14; }
+.footer-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 0; }
+.footer-inner a{ margin-right:12px; color:var(--muted); }
+.footer-inner a:hover{ color:var(--text); }
+@media (max-width:720px){ .footer-inner{ flex-direction:column; } }
+
+/* Subnav for results/teams/schedule */
+.subnav{ position:sticky; top:0; z-index:900; background:rgba(13,15,19,.95); border-bottom:1px solid var(--border); }
+.subnav ul{ display:flex; gap:14px; list-style:none; padding:10px 20px; margin:0; }
+.subnav a{ color:var(--text); padding:8px 10px; border-radius:8px; }
+.subnav a:hover, .subnav a.active{ background:var(--hover); }
+
+/* Results list & modal */
+.results-list{ padding:40px 20px; max-width:900px; margin:0 auto; }
+.results-list ul{ list-style:none; padding:0; text-align:center; }
+.results-list li{ margin:15px 0; }
+.results-list a{ color:var(--text); font-size:20px; }
+.results-list a:hover{ color:var(--brand); }
+
+.modal{ display:none; position:fixed; z-index:1000; inset:0; background:rgba(0,0,0,.85); align-items:center; justify-content:center; }
+.modal-content{ max-width:90%; max-height:85%; border-radius:12px; box-shadow:var(--shadow); }
+.close{ position:absolute; top:18px; right:26px; font-size:40px; color:#fff; cursor:pointer; }
+
+/* Teams table */
+.team-wrap{ max-width:720px; margin:32px auto; padding:0 16px; }
+.team-table{ width:100%; border-collapse:collapse; border:1px solid var(--border); }
+.team-table th, .team-table td{ padding:12px 10px; text-align:center; border-bottom:1px solid var(--border); }
+.team-table th{ background:#0f1722; color:var(--muted); }
