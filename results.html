@@ -3,40 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAALKASH - Results</title>
+  <title>Daalkash - Results</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="subnav">
-      <ul>
-        <li><a href="results.html" class="active">Programs</a></li>
-        <li><a href="teams.html">Teams</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav class="subnav">
+    <ul>
+      <li><a href="results.html" class="active">Programs</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main class="results-list">
-    <h2>Programs</h2>
-    <div class="program-grid">
-      <div class="program-card" onclick="showPoster('https://i.postimg.cc/053HT4DL/Gemini-Generated-Image-3extyu3extyu3ext.png')">
-        High School Madhu Hanam
-      </div>
-      <div class="program-card" onclick="showPoster('https://i.postimg.cc/Pq7T044K/Gemini-Generated-Image-lmbyfjlmbyfjlmby.png')">
-        Junior Poem Making
-      </div>
-      <div class="program-card" onclick="showPoster('https://i.postimg.cc/RhR8xCm9/Gemini-Generated-Image-89z1gm89z1gm89z1.png')">
-        Junior Story Writing
-      </div>
+<main>
+  <h2 style="text-align:center;color:var(--brand);margin:20px 0;">Programs</h2>
+  <div class="programs-grid">
+    <div class="program-card" onclick="showPoster('https://via.placeholder.com/600x400?text=Program+1+Poster')">
+      <h3>High School Madhu Ganam</h3>
     </div>
-  </main>
-
-  <!-- Poster Modal -->
-  <div id="posterModal" class="modal" onclick="closePoster()">
-    <span class="close" onclick="closePoster()">&times;</span>
-    <img class="modal-content" id="posterImg">
+    <div class="program-card" onclick="showPoster('https://via.placeholder.com/600x400?text=Program+2+Poster')">
+      <h3>Junior Poem Making</h3>
+    </div>
+    <div class="program-card" onclick="showPoster('https://via.placeholder.com/600x400?text=Program+3+Poster')">
+      <h3>Junior Story Writing</h3>
+    </div>
   </div>
+</main>
+
+<div id="posterModal" class="modal">
+  <span class="close" onclick="closePoster()">&times;</span>
+  <img id="posterImg" src="" alt="Poster">
+</div>
+
 </body>
 </html>
