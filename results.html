@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results | DAALKASH</title>
-    <link rel="stylesheet" href="/daalkash/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,16 +24,51 @@
     </nav>
 
     <header class="page-header">
-        <h1>Results</h1>
+        <div class="container">
+            <h1>Program Results</h1>
+            <p>Click on an item to view the result poster.</p>
+        </div>
     </header>
 
-    <main class="container" style="padding: 50px 20px; text-align:center;">
-        <p>The event results will be published here.</p>
+    <main class="container">
+        <div class="results-grid">
+            <div class="result-item" data-img-src="https://i.postimg.cc/053HT4DL/Gemini-Generated-Image-3extyu3extyu3ext.png">
+                <span class="result-number">1</span>
+                <div class="result-details">
+                    <span class="result-title">Madh Ganam</span>
+                    <span class="result-category">High School</span>
+                </div>
+            </div>
+
+            <div class="result-item" data-img-src="https://i.postimg.cc/Pq7T044K/Gemini-Generated-Image-lmbyfjlmbyfjlmby.png">
+                <span class="result-number">2</span>
+                <div class="result-details">
+                    <span class="result-title">Poem Making</span>
+                    <span class="result-category">Junior</span>
+                </div>
+            </div>
+
+            <div class="result-item" data-img-src="https://i.postimg.cc/RhR8xCm9/Gemini-Generated-Image-89z1gm89z1gm89z1.png">
+                <span class="result-number">3</span>
+                <div class="result-details">
+                    <span class="result-title">Story Writing</span>
+                    <span class="result-category">Junior</span>
+                </div>
+            </div>
+
+        </div>
     </main>
+
+    <div id="result-modal" class="modal">
+      <span class="close-button">&times;</span>
+      <img class="modal-content" id="modal-image">
+    </div>
 
     <footer class="footer">
         <p>&copy; 2025 DAALKASH. All Rights Reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
