@@ -1,12 +1,12 @@
 :root {
-    --bg: #ffffff;
-    --panel: #f8f9fa;
-    --text: #343a40;
-    --muted: #6c757d;
-    --brand: #d4af37; /* സാഹിത്യോത്സവത്തിലെ ഗോൾഡൻ നിറം */
-    --brand-strong: #b38f29;
-    --border: #dee2e6;
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --bg: #11131a;
+    --panel: #171b24;
+    --text: #e6eaf0;
+    --muted: #9db2c7;
+    --brand: #ffd700;
+    --brand-strong: #ceaa00;
+    --border: #23283a;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 * {
     box-sizing: border-box; margin: 0; padding: 0;
@@ -16,17 +16,18 @@ body {
     color: var(--text);
     background: var(--bg);
     line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
 }
 .container {
     width: min(1200px, 92%);
     margin: 0 auto;
 }
 .navbar {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(23, 27, 36, 0.85);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     padding: 15px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     position: sticky; top: 0; z-index: 100;
 }
 .navbar .container{
@@ -42,7 +43,10 @@ body {
     color: var(--brand);
 }
 .logo {
-    font-size: 26px; font-weight: 700; color: var(--brand-strong);
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 28px; 
+    font-weight: 700; 
+    color: var(--brand);
 }
 .hero {
     text-align: center;
@@ -50,19 +54,25 @@ body {
     color: white;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x1080');
+    background-image: linear-gradient(rgba(17,19,26,0.9), rgba(17,19,26,0.9)), url('https://images.unsplash.com/photo-1542820229-0857b038734e?q=80&w=2070&auto=format&fit=crop');
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .hero h1 {
-    font-size: 4.5rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 5.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; text-fill-color: transparent;
 }
 .hero p {
-    font-size: 1.4rem; margin: 15px 0 30px;
+    font-size: 1.4rem; margin: 15px 0 30px; color: var(--muted);
 }
 .btn-primary {
-    background: var(--brand); color: #ffffff; padding: 15px 30px;
+    background: var(--brand); color: #111; padding: 15px 30px;
     border-radius: 50px; font-weight: bold; transition: background 0.3s, transform 0.2s;
     display: inline-block; text-decoration: none;
 }
@@ -73,10 +83,12 @@ body {
     padding: 90px 20px; text-align: center;
 }
 .section-alt {
-    background-color: var(--panel);
+    background-color: var(--bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 .section h2 {
-    color: var(--brand-strong); margin-bottom: 15px; font-size: 3rem;
+    color: var(--brand); margin-bottom: 15px; font-size: 3rem;
 }
 .section-subtitle {
     max-width: 600px; margin: 0 auto 60px auto; color: var(--muted); font-size: 1.1rem;
@@ -88,13 +100,14 @@ body {
     text-align: left;
 }
 .card {
-    background: #ffffff; border-radius: 12px;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px;
     overflow: hidden; box-shadow: var(--shadow);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
 }
 .card img {
     width: 100%; height: 200px; object-fit: cover;
@@ -117,14 +130,16 @@ body {
 }
 .gallery-grid img {
     width: 100%; height: 250px; object-fit: cover; border-radius: 12px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s;
+    filter: brightness(0.9);
 }
 .gallery-grid img:hover {
     transform: scale(1.05);
+    filter: brightness(1.1);
 }
 .footer {
-    background: #212529; color: #f8f9fa;
+    background: var(--panel); color: var(--muted);
     padding: 40px 20px; text-align: center; margin-top: 50px;
+    border-top: 1px solid var(--border);
 }
-
 
